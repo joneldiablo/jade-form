@@ -1,0 +1,17 @@
+mixin formgroup-general(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.name = spec.name || ''
+  - spec.label = spec.label || ''
+  - spec.type = spec.type || ''
+  - spec.inputAttrs = spec.inputAttrs || {}
+  - spec.options = spec.options || {}
+
+  .form-group.formgroup-general(class=spec.__class)&attributes(attributes)
+    label(for=spec.name)= spec.label
+    if spec.type == "select"
+      select.form-control(name=spec.name id=spec.name type=spec.type)&attributes(spec.inputAttrs)
+        each optionElem, indexValue in spec.options
+          option(value=indexValue)&attributes(optionElem.attrs?optionElem.attrs:{})= optionElem.text
+    else
+      input.form-control(name=spec.name id=spec.name type=spec.type)&attributes(spec.inputAttrs)
