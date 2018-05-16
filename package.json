@@ -1,0 +1,21 @@
+{
+  "name": "jade-form",
+  "version": "1.0.2",
+  "description": "jade module with ecma6 and scss, create form fileds, this require bootstrap 4 and jquery",
+  "main": "./src/jade-form.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jade",
+    "js",
+    "scss",
+    "ecma6"
+  ],
+  "author": "Jonathan Diego <jon_eldiablo@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.1"
+  }
+}

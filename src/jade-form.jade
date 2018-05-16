@@ -1,4 +1,4 @@
-mixin formgroup-general(spec)
+mixin jade-form(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
   - spec.name = spec.name || ''
@@ -6,12 +6,13 @@ mixin formgroup-general(spec)
   - spec.type = spec.type || ''
   - spec.inputAttrs = spec.inputAttrs || {}
   - spec.options = spec.options || {}
+  - spec.validation = spec.validation || false
 
-  .form-group.formgroup-general(class=spec.__class)&attributes(attributes)
+  .form-group.jade-form(class=spec.__class)&attributes(attributes)
     label(for=spec.name)= spec.label
     if spec.type == "select"
       select.form-control(name=spec.name id=spec.name type=spec.type)&attributes(spec.inputAttrs)
         each optionElem, indexValue in spec.options
           option(value=indexValue)&attributes(optionElem.attrs?optionElem.attrs:{})= optionElem.text
     else
-      input.form-control(name=spec.name id=spec.name type=spec.type)&attributes(spec.inputAttrs)
+      input.form-control(name=spec.name id=spec.name type=spec.type data-validation=spec.validation)&attributes(spec.inputAttrs)
