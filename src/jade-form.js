@@ -44,6 +44,18 @@ class JadeForm {
         }
       }
     });
+
+    $.ajax({
+      url: "http://localhost:3005/cities",
+      method: "GET"
+    }).done((data) => {
+      var $opt = $("<option>");
+      data.forEach(element => {
+        $(".jade-form select").append($opt.clone().attr(element.attrs).text(element.text));
+      });
+    }).fail((error) => {
+
+    });
   }
 }
 
