@@ -1,4 +1,4 @@
-mixin jade-form(spec)
+mixin pug-form(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
   - spec.name = spec.name || ''
@@ -8,7 +8,7 @@ mixin jade-form(spec)
   - spec.options = spec.options || {}
   - spec.validation = spec.validation || false
 
-  .form-group.jade-form(class=spec.__class)&attributes(attributes)
+  .form-group.pug-form(class=spec.__class)&attributes(attributes)
     label(for=spec.name)= spec.label
     if spec.type == "select"
       select.form-control(name=spec.name id=spec.name type=spec.type)&attributes(spec.inputAttrs)

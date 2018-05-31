@@ -1,6 +1,6 @@
-# jade-form-general
+# pug-form-general
 
-Install `npm install --save-dev https://github.com/joneldiablo/jade-form.git`
+Install `npm install --save-dev https://github.com/joneldiablo/pug-form.git`
 
 .jade
 
@@ -9,7 +9,7 @@ Example:
 .jade
 
 ```jade
-include node_modules/jade-form/src/jade-form
+include node_modules/pug-form/src/pug-form
 
 form(action=baseUrl)
   -
@@ -66,7 +66,7 @@ form(action=baseUrl)
         type: "text"
       }]
   each field in fields
-    +jade-form(field)
+    +pug-form(field)
   input.btn.btn-primary(type="submit", value="Enviar")
 ```
 
@@ -78,7 +78,7 @@ js
 import $ from 'jquery';
 import 'bootstrap';
 
-import JadeForm from 'jade-form';
+import JadeForm from 'pug-form';
 
 $(() => {
   new JadeForm();

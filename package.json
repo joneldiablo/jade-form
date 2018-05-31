@@ -1,8 +1,8 @@
 {
-  "name": "jade-form",
+  "name": "pug-form",
   "version": "1.0.2",
   "description": "jade module with ecma6 and scss, create form fileds, this require bootstrap 4 and jquery",
-  "main": "./src/jade-form.js",
+  "main": "./src/pug-form.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

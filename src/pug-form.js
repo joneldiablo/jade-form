@@ -5,9 +5,9 @@ const $ = require('jquery');
 class JadeForm {
   constructor(validator) {
 
-    this.name = 'jade-form';
+    this.name = 'pug-form';
 
-    $(".jade-form").on("change", "input,select", function (e) {
+    $(".pug-form").on("change", "input,select", function (e) {
       let regexText = /^[a-zA-ZáéíóúÁÉÍÓÚÜü. ]+$/g,
         regexCP = /^\d{4}$/,
         regexDate = /^\d{4}-\d{2}-\d{2}$/,
@@ -51,7 +51,7 @@ class JadeForm {
     }).done((data) => {
       var $opt = $("<option>");
       data.forEach(element => {
-        $(".jade-form select").append($opt.clone().attr(element.attrs).text(element.text));
+        $(".pug-form select").append($opt.clone().attr(element.attrs).text(element.text));
       });
     }).fail((error) => {
 

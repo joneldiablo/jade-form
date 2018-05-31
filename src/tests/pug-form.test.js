@@ -1,6 +1,6 @@
 'use strict';
 
-import FormgroupGeneral from '../jade-form';
+import FormgroupGeneral from '../pug-form';
 
 describe('FormgroupGeneral View', function() {
 
